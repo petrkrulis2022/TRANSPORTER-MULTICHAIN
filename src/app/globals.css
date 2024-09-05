@@ -4,7 +4,7 @@
 
 :root {
 	line-height: 1.5;
-	font-weight: 400;
+	font-weight: 800;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -17,6 +17,127 @@
 
 @layer base {
 	body {
-		@apply bg-zinc-950 text-neutral-200;
+		@apply bg-zinc-950 text-neutral-800;
 	}
 }
+
+.networks {
+	width: 90%; /* Reduced width */
+	max-width: 700px;
+	margin: 0 auto; /* Center horizontally */
+	padding: 20px;
+	border: 5px solid #ccc;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+}
+
+.networks h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.networks .row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.networks .row select,
+.networks .row input,
+.networks .row button {
+	flex: 1;
+	margin-right: 10px;
+}
+
+.networks .row input[type="number"] {
+	max-width: 100px;
+}
+
+.networks .row button {
+	flex: 0 0 auto;
+}
+
+.networks .row:last-of-type {
+	margin-top: 20px;
+}
+
+.networks .row label {
+	margin-right: 10px;
+	flex: 2;
+}
+
+.networks .row input[readonly] {
+	flex: 1;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+/* Center the entire component */
+.networks {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100; /* Ensure it appears above other elements */
+}
+
+  
+  .networks .row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
+  }
+  
+  .networks .row select,
+  .networks .row input,
+  .networks .row button {
+	flex: 1;
+	margin-right: 10px;
+  }
+  
+  .networks .row input[type="number"] {
+	max-width: 100px;
+  }
+  
+  .networks .row button {
+	flex: 0 0 auto;
+  }
+  
+  .networks .row:last-of-type {
+	margin-top: 20px;
+  }
+  
+  .networks .row label {
+	margin-right: 10px;
+	flex: 2;
+  }
+  
+  .networks .row input[readonly] {
+	flex: 1;
+  }
+  
+  button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  button:hover {
+	background-color: #0056b3;
+  }

@@ -1,0 +1,2 @@
+import { ThirdwebContract } from "thirdweb";
+

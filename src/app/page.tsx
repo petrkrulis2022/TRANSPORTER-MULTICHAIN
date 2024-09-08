@@ -5,7 +5,7 @@ import { ConnectButton, useActiveAccount } from "thirdweb/react";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
 import React, { useState, useEffect } from 'react'
-import { CROWDFUNDING_FACTORY } from "./constants/contracts";
+import { CROWDFUNDING_FACTORY } from "./constants/ccipcontracts";
 import { useReadContract } from "thirdweb/react";
 import { baseSepolia } from "thirdweb/chains";
 import { getContract } from "thirdweb";
@@ -16,6 +16,7 @@ import { getContract } from "thirdweb";
 export default function Home() {
   
  //const account = useActiveAccount();
+  //usecontract hook
   /*const contract = getContract({
     client: client,
     chain: baseSepolia,
@@ -56,14 +57,14 @@ function Header1() {
       <div className="fixed top-0 left-80   p-4 flex justify-between items-center space-x-4">
         <ArticleCard
           title="Get testnet tokens"
-          href="https://portal.thirdweb.com/typescript/v5"
-          description="get testnet tokens on Chainlink faucet"
+          href="https://faucets.chain.link/"
+          description="Chainlink faucet"
         />
   
         <ArticleCard
-          title="Components and Hooks"
-          href="https://portal.thirdweb.com/typescript/v5/react"
-          description="Learn about the thirdweb React components and hooks in thirdweb SDK"
+          title="Github Repo"
+          href="https://github.com/petrkrulis2022/TRANSPORTER-MULTICHAIN"
+          description="Github Repo"
         />
   
         
@@ -87,10 +88,13 @@ function Header(){
   const tokens = ["ETH", "USDC", "LINK", "GHO", "BnM", "LnM"]
   
   const stakeOptions = [
-    "RocketPool rETH",
-    "LIDO stETH",
-    "SWELL swETH",
-    "ETHERFI eETH"
+    "Send tokens to Your Metamsk accounts)",
+    "Send tokens to Wallet address ( EOA)",
+    "Buy NFT on destination chain",
+    "Mint BNBS+ Stablecoin on BNB testnet",
+    "Stake with LIDO stETH",
+    "Stake with RocketPool rETH",
+    "Stake with CCIP Staker.sol"
   ]
   const updateTotal = () => {
     const amounts = [
@@ -129,20 +133,20 @@ function Header(){
         ))}
         <div className="row">
           <select>
-            <option value="">Select Destination</option>
+            <option value="">Select Destination Chain</option>
             {networks.map((network, index) => (
               <option key={index} value={network}>{network}</option>
             ))}
           </select>
           <select>
-            <option value="">Stake with on Destination Chain</option>
+            <option value="">Select require action on destination chain</option>
             {stakeOptions.map((option, index) => (
               <option key={index} value={option}>{option}</option>
             ))}
           </select>
         </div>
         <div className="row">
-          <label>Total Value Staked in USDC</label>
+          <label>Total Value Sent in USDC</label>
           <input type="number" readOnly value={total} />
         </div>
         <button onClick={updateTotal}>Send</button>
@@ -156,15 +160,15 @@ function ThirdwebResources() {
   return (
     <div className="fixed bottom-0 left-80   p-4 flex justify-between items-center space-x-4">
       <ArticleCard
-        title="Get testnet tokens"
-        href="https://portal.thirdweb.com/typescript/v5"
-        description="get testnet tokens on Chainlink faucet"
+        title="CCIP Explorer"
+        href="https://ccip.chain.link/msg/0x84fb02c84aa4da86cfee5f880a6cb594d5d3fd476b4cf233d4e296a0dabca15d"
+        description="CCIP Explorer"
       />
 
       <ArticleCard
-        title="Components and Hooks"
-        href="https://portal.thirdweb.com/typescript/v5/react"
-        description="Learn about the thirdweb React components and hooks in thirdweb SDK"
+        title="BNBS+ Stablecoin"
+        href="https://drive.google.com/file/d/16O-wOoS51xr__Xto2N_CO8B4C6ix0ndo/view?usp=drive_link"
+        description="BNBS+ Stablecoin on BNB Chain"
       />
 
       <ArticleCard

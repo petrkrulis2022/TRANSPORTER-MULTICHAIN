@@ -1,0 +1,8 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Other SVG content here -->
+
+  <!-- Embedding an image -->
+  <image href="/home/petrunix/ccip-thirdweb-app/public/images/trasnporter pic.png" x="50" y="50" width="400" height="400" />
+
+  <!-- Other SVG content here -->
+</svg>
